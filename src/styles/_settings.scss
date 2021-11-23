@@ -5,7 +5,7 @@ $font-2: 'Montagu slab', sans-serif;
 
 $white: rgb(240, 239, 239);
 $black: #333;
-$blackBackground: #777;
+$blackBackground: #888;
 
 $borderRadius: 15px;
 $shadow: 0 0 10px #333;
@@ -49,12 +49,5 @@ a:visited {
 
     @media screen and (min-width: 1024px) {
         display: flex !important;
-    }
-}
-.homeContent, .knowledgeContent, .portfolioContent, .contactContent {
-    margin-left: 0;
-
-    @media screen and (min-width: 768px) {
-        margin-left: 0.4rem !important;
     }
 }
