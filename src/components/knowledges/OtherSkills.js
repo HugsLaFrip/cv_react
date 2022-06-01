@@ -22,7 +22,7 @@ const OtherSkills = () => {
                 <ul>
                     <li>
                         <i className="fas fa-check-square"></i>
-                        Figma
+                        Miro
                     </li>
                     <li>
                         <i className="fas fa-check-square"></i>
@@ -31,6 +31,16 @@ const OtherSkills = () => {
                     <li>
                         <i className="fas fa-check-square"></i>
                         Agile
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <i className="fas fa-check-square"></i>
+                        Gestion
+                    </li>
+                    <li>
+                        <i className="fas fa-check-square"></i>
+                        PowerShell
                     </li>
                 </ul>
             </div>

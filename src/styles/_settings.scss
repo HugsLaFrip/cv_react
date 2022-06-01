@@ -5,7 +5,8 @@ $font-2: 'Montagu slab', sans-serif;
 
 $white: rgb(240, 239, 239);
 $black: #333;
-$blackBackground: #888;
+// $background: rgba(0, 0, 0, 0.75);
+$background: rgba(20, 20, 20, 0.48);
 
 $borderRadius: 15px;
 $shadow: 0 0 10px #333;
@@ -17,34 +18,45 @@ $minHeight: 97.5vh;
     justify-content: center;
     align-items: center;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%
 }
+
 body {
     font-size: 1.6rem;
     line-height: 1.5;
 }
+
 button {
     cursor: pointer;
 }
+
 li {
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
     cursor: pointer;
     color: $black;
 }
+
 a:visited {
     color: $black;
 }
-.home, .knowledge, .portfolio, .contact {
+
+.home,
+.knowledge,
+.portfolio,
+.contact {
     display: block;
 
     @media screen and (min-width: 1024px) {

@@ -1,14 +1,14 @@
 .portfolio {
     .portfolioContent {
         margin: 1rem;
-        
+
         .radioDisplay {
             border-radius: $borderRadius;
             display: flex;
             background: $white;
             user-select: none;
             box-shadow: $shadow;
-            
+
             li {
                 color: $black;
                 font-size: 1.1rem;
@@ -17,7 +17,7 @@
                 flex: 1;
 
                 @include verticalCenter;
-                
+
                 &:before {
                     content: '';
                     height: 1rem;
@@ -26,14 +26,16 @@
                     border: 2px solid $black;
                     transition: 0.3s;
                 }
+
                 span {
                     position: relative;
-                    
+
                     input[type="radio"] {
                         visibility: hidden;
                         width: 0;
                     }
-                    input:checked + label:before {
+
+                    input:checked+label:before {
                         content: '';
                         display: inline-block;
                         position: absolute;
@@ -44,15 +46,17 @@
                         height: 1rem;
                         border-radius: 50%;
                     }
+
                     label {
                         cursor: pointer;
                     }
                 }
             }
         }
-        .projects {            
+
+        .projects {
             .project {
-                background: $blackBackground;
+                background: $background;
                 border-radius: $borderRadius;
                 margin-top: 1rem;
                 text-align: center;
@@ -62,16 +66,16 @@
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: 15% 15% 60% 10%;
-                grid-template-areas: 
-                "1"
-                "2"
-                "3"
-                "4";
-                
+                grid-template-areas:
+                    "1"
+                    "2"
+                    "3"
+                    "4";
+
                 .icons {
                     grid-area: 1;
                     @include verticalCenter;
-                    
+
                     i {
                         font-size: 2.25rem;
                         padding: 0 .5rem;
@@ -80,6 +84,7 @@
                         text-shadow: 0 0 4px $white;
                     }
                 }
+
                 h3 {
                     grid-area: 2;
                     font-family: $font-2;
@@ -88,6 +93,7 @@
                     @include verticalCenter;
                     justify-content: left;
                 }
+
                 img {
                     grid-area: 3;
                     object-fit: cover;
@@ -98,6 +104,7 @@
                     border-radius: 4px;
                     @include verticalCenter;
                 }
+
                 .infos {
                     grid-area: 4;
                     color: $white;
@@ -105,11 +112,12 @@
                     font-size: 3rem;
                     @include verticalCenter;
                     transition: .25s ease-in-out;
-                    
+
                     &:hover {
                         transform: scale(1.1);
                     }
                 }
+
                 .showInfos {
                     position: fixed;
                     top: 0;
@@ -119,7 +127,7 @@
                     background: rgba(0, 0, 0, 0.507);
                     animation: popup .3s ease-in-out forwards;
                     transform-origin: center;
-                    
+
                     .infosContent {
                         position: relative;
                         top: 15%;
@@ -133,22 +141,24 @@
                         animation: popup .6s ease-in-out forwards;
                         transform: scale(0);
                         transform-origin: center;
-                        
+
                         @keyframes popup {
                             to {
                                 transform: scale(1);
                             }
                         }
+
                         .head {
                             display: flex;
                             justify-content: space-around;
                             margin: 1rem 0;
-                            
+
                             h2 {
                                 text-align: left;
                                 margin-bottom: 1rem;
                             }
                         }
+
                         .button {
                             cursor: pointer;
                             color: $white;
@@ -157,17 +167,19 @@
                             border-radius: 25px;
                             padding: 1rem 2rem;
                             transition: all .2s ease-in-out;
-                            
+
                             &:hover {
                                 background: $white;
                                 color: $black;
                                 border: 2px solid $black;
                             }
                         }
+
                         .text {
                             text-align: justify;
                             padding-bottom: 1rem;
                         }
+
                         .return {
                             margin: 1rem auto;
                             width: 200px;
@@ -178,21 +190,23 @@
         }
     }
 }
+
 @media screen and (min-width: 600px) {
     .portfolio {
         .portfolioContent {
-            .radioDisplay {                
+            .radioDisplay {
                 li {
                     font-size: 1.35rem;
                     padding: 1.25rem .5rem;
-                    
+
                     span {
-                        input:checked + label:before {
+                        input:checked+label:before {
                             top: 5px;
                         }
                     }
                 }
             }
+
             .projects {
                 display: flex;
                 justify-content: space-between;
@@ -205,43 +219,46 @@
         }
     }
 }
-@media screen and (min-width: 1024px) { 
+
+@media screen and (min-width: 1024px) {
     .portfolio {
         .portfolioContent {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 50px 1fr;
-            grid-template-areas: 
-            "1"
-            "2";
-            
+            grid-template-areas:
+                "1"
+                "2";
+
             .radioDisplay {
                 grid-area: 1;
-                
+
                 li {
                     font-size: 1.5rem;
-                    
+
                     span {
-                        input:checked + label:before {
+                        input:checked+label:before {
                             top: 6px;
                         }
                     }
                 }
             }
+
             .projects {
                 grid-area: 2;
-                
+
                 .project {
                     width: 32.5%;
                     max-height: 431px;
-                    
+
                     .infos {
                         &:hover {
                             transform: scale(0.9);
                         }
                     }
-                    .showInfos {                        
+
+                    .showInfos {
                         .infosContent {
                             top: 25%;
                             width: 600px;
@@ -252,4 +269,4 @@
         }
 
     }
-}   
+}

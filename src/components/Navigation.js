@@ -41,18 +41,18 @@ const Navigation = () => {
             <div className="socialNetwork">
                 <ul>
                     <li>
-                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/hugo-sorabella-b9718a127/" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/HugsLaFrip" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>
                 <div className="signature">
-                    <p><i className="far fa-copyright"></i> Hugo Sorabella - 2021</p>
+                    <p><i className="far fa-copyright"></i> Hugo Sorabella - 2022</p>
                 </div>
             </div>
         </div>
