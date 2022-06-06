@@ -15,7 +15,7 @@ const Hobbies = () => {
                 </li>
                 <li className="hobby">
                     <i className="fas fa-gamepad"></i>
-                    Jeux-vidéo (Sports, The witcher, Uncharted, Star Wars...)
+                    Jeux-vidéo (Star Wars, The witcher, Uncharted, Sports...)
                 </li>
             </ul>
         </div>

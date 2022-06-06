@@ -29,7 +29,11 @@ class Project extends Component {
                             <div className="infosContent">
                                 <div className="head">
                                     <h2>{name}</h2>
-                                    <a href={source} className="button" target="_blank" rel="noopener noreferrer">Code source</a>
+                                    {
+                                        source && (
+                                            <a href={source} className="button" target="_blank" rel="noopener noreferrer">Visiter</a>
+                                        )
+                                    }
                                 </div>
                                 <p className="text">{info}</p>
                                 <div className="button return" onClick={this.handleInfos}>Retour sur la page</div>

@@ -8,7 +8,7 @@ class ProjectList extends Component {
         radios: [
             { id: 1, value: 'javascript' },
             { id: 2, value: 'php' },
-            { id: 3, value: 'react' },
+            { id: 3, value: 'codeigniter' },
             { id: 4, value: 'symfony' },
         ],
         selectedRadio: 'javascript'
