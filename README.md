@@ -4,7 +4,7 @@ Vous pouvez retrouver ici mon CV fait avec ReactJs
 
 ## Pré-requis
 
-```powershell
+```shell
 NPM (Node package manager)
 ```
 
@@ -12,19 +12,19 @@ NPM (Node package manager)
 
 1. Récupérez le repository
 
-```powershell
+```shell
 git clone git@github.com:HugsLaFrip/cv_react.git
 ```
 
 2. Installez les dépendances
 
-```powershell
+```shell
 npm install
 ```
 
 3. Démarrer le serveur local
 
-```powershell
+```shell
 npm start
 ```
 
