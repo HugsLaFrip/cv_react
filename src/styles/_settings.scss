@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montagu+Slab:wght@200&display=swap');
+
+$font-1: 'Dancing script', cursive;
+$font-2: 'Montagu slab', sans-serif;
+
+$white: #ffffff;
+$black: #121212;
+$sectionBackground: #343434;
+
+$borderRadius: 15px;
+$shadow: 0 0 10px #333;
+
+$height: 98vh;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $black;
+}
+
+a:visited {
+    color: $black;
+}
+
+.website {
+    display: block;
+
+    @media screen and (min-width: 1024px) {
+        display: flex !important;
+    }
+}

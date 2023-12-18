@@ -1,0 +1,184 @@
+.contactContent {
+  background: $black;
+  border-radius: $borderRadius;
+  margin: 1rem;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 55% 25%;
+  grid-template-areas:
+    "1"
+    "2"
+    "3";
+
+  .header {
+    grid-area: 1;
+    width: 100%;
+    position: relative;
+    border-radius: $borderRadius;
+    height: 340px;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url(../../media/map.jpg) no-repeat center top/cover;
+      filter: grayscale(90%);
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 30px;
+      background: url(../../media/shape.svg) no-repeat center /cover;
+    }
+  }
+
+  .contactBox {
+    grid-area: 2;
+    background: $white;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    z-index: 2;
+    border-radius: $borderRadius;
+    box-shadow: 0 3px 10px $black;
+    width: 50%;
+    min-width: 300px;
+    min-height: 250px;
+    position: relative;
+    top: -50px;
+
+    h1 {
+      text-align: center;
+      margin-top: 0.3rem;
+      position: relative;
+      color: $black;
+
+      &:after {
+        content: '';
+        height: 1px;
+        width: 50%;
+        background: $black;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    ul {
+      margin-top: 3.5rem;
+
+      li {
+        font-size: 1.6rem;
+        color: $black;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        i {
+          margin-right: 2rem;
+        }
+
+        .clickInput:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .socialNetwork {
+    grid-area: 3;
+    margin: 2rem 0;
+    @include verticalCenter;
+
+    ul {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+
+      a {
+        font-size: 1.8rem;
+        background: $white;
+        border: 1px solid $black;
+        border-radius: $borderRadius;
+        display: inline-block;
+        margin-right: 1rem;
+        padding: 1rem 4rem;
+        box-shadow: $shadow;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: .2s ease;
+
+        &:hover {
+          background: $black;
+          border: 1px solid $white;
+          color: $white;
+        }
+
+        &:hover>i {
+          color: $white;
+        }
+
+        i {
+          color: $black;
+          margin-top: .3rem;
+        }
+      }
+
+      //ANIMATION
+      @mixin networkAnim($timeout) {
+        animation: pop 1s forwards;
+        animation-delay: $timeout;
+
+      }
+
+      @keyframes pop {
+        to {
+          transform: scaleY(1);
+        }
+      }
+
+      li:nth-child(1) {
+        a {
+          @include networkAnim(.4s);
+        }
+      }
+
+      li:nth-child(2) {
+        a {
+          @include networkAnim(.8s);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactContent {
+    width: 100%;
+
+    .header {
+      height: 450px;
+    }
+
+    .contactBox {
+      height: 67.5%;
+      top: 110px;
+
+      ul {
+        li {
+          font-size: 2rem;
+
+          i {
+            margin-right: 5rem;
+          }
+        }
+      }
+    }
+  }
+}

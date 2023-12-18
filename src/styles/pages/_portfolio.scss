@@ -1,0 +1,174 @@
+.portfolioContent {
+    margin: 1rem;
+
+    .projects {
+        .project {
+            background: $black;
+            border-radius: $borderRadius;
+            margin-top: 1rem;
+            text-align: center;
+            width: 100%;
+            max-height: 500px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .icons {
+                i {
+                    font-size: 2.25rem;
+                    padding: 0 .5rem;
+                    margin-bottom: .5rem;
+                    color: $black;
+                    text-shadow: 0 0 4px $white;
+                }
+            }
+
+            h3 {
+                grid-area: 2;
+                font-family: $font-2;
+                color: $white;
+                font-size: 2.2rem;
+                justify-content: left;
+            }
+
+            img {
+                grid-area: 3;
+                object-fit: cover;
+                margin: 2rem auto;
+                width: 90%;
+                height: 90%;
+                box-shadow: $shadow;
+                border-radius: 4px;
+            }
+
+            .infos {
+                width: fit-content;
+                grid-area: 4;
+                color: $white;
+                cursor: pointer;
+                font-size: 3rem;
+                transition: .15s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .showInfos {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.507);
+                animation: popup .3s ease-in-out forwards;
+                transform-origin: center;
+
+                .infosContent {
+                    position: relative;
+                    top: 15%;
+                    width: 90%;
+                    margin: 0 auto;
+                    color: $black;
+                    background: $white;
+                    padding: 2rem;
+                    border-radius: $borderRadius;
+                    box-shadow: $shadow;
+                    animation: popup .6s ease-in-out forwards;
+                    transform: scale(0);
+                    transform-origin: center;
+
+                    @keyframes popup {
+                        to {
+                            transform: scale(1);
+                        }
+                    }
+
+                    .head {
+                        display: flex;
+                        justify-content: space-around;
+                        margin: 1rem 0;
+
+                        h2 {
+                            text-align: left;
+                            margin-bottom: 1rem;
+                        }
+                    }
+
+                    .button {
+                        cursor: pointer;
+                        color: $white;
+                        background: $black;
+                        border: 2px solid $white;
+                        border-radius: 25px;
+                        padding: 1rem 2rem;
+                        transition: all .2s ease-in-out;
+
+                        &:hover {
+                            background: $white;
+                            color: $black;
+                            border: 2px solid $black;
+                        }
+                    }
+
+                    .text {
+                        text-align: justify;
+                        padding-bottom: 1rem;
+                    }
+
+                    .return {
+                        margin: 1rem auto;
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .projects {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .project {
+            width: 49%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .portfolioContent {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            "1"
+            "2";
+
+        .projects {
+            grid-area: 2;
+
+            .project {
+                width: 32.5%;
+                max-height: 431px;
+
+                .infos {
+                    &:hover {
+                        transform: scale(0.9);
+                    }
+                }
+
+                .showInfos {
+                    .infosContent {
+                        top: 25%;
+                        width: 600px;
+                    }
+                }
+            }
+        }
+    }
+}
